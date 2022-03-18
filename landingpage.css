@@ -1,0 +1,289 @@
+body {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    animation: animate3 5s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    25% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.75);
+    }
+    50% {
+        transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+    75% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.75);
+    }
+    100% {
+        transform: translateX(0) translateZ(0) scaleY(1);
+    }
+}
+
+@keyframes wave1 {
+    0% {
+        transform: translateX(0) translateZ(0) translateY(20%) scaleY(1);
+    }
+    25% {
+        transform: translateX(-25%) translateZ(0) translateY(30%) scaleY(0.50);
+    }
+    50% {
+        transform: translateX(-50%) translateZ(0) translateY(40%) scaleY(1);
+    }
+    75% {
+        transform: translateX(-25%) translateZ(0) translateY(30%) scaleY(0.50);
+    }
+    100% {
+        transform: translateX(0) translateZ(0) translateY(20%) scaleY(1);
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-60%);
+        color: #29297b;
+        text-shadow: 6px 3px 2px #302cc1, 10px 6px 4px #fff;
+    }
+    100% {
+        transform: translateX(0%);
+        color: white;
+        text-shadow: 6px 3px 2px #29297b, 10px 6px 4px #000;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(-120%);
+        text-shadow: 2px 2px 2px #302cc1, 4px 3px 3px #fff;
+        color: #29297b;
+    }
+    100% {
+        transform: translateX(0%);
+        color: white;
+        text-shadow: 2px 2px 2px #29297b, 4px 3px 3px #000;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: rgb(155, 155, 255);
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+#SecondZone>p {
+    content: ' ';
+    position: relative;
+    color: #29297b;
+    top: 350px;
+    font-size: larger;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+
+blockquote {
+    position: relative;
+    color: #29297b;
+    font-size: large;
+    font-weight: 100;
+    text-align: start;
+    padding: 16px;
+    margin: 0px;
+    z-index: 10;
+}
+
+#begin {
+    background-color: #302cc1;
+    position: absolute;
+    top: 0;
+    height: 300px;
+    width: 100%;
+    z-index: -1;
+}
+
+#beginning {
+    background-color: #3c3cf1;
+    position: absolute;
+    top: 0;
+    height: 250px;
+    width: 100%;
+    z-index: 1;
+}
+
+#begin::after {
+    content: ' ';
+    background-color: #302cc1;
+    display: block;
+    position: relative;
+    width: 55%;
+    height: 100%;
+    border-radius: 100% 50%;
+    transform: translate(30%, 50%);
+    z-index: -1;
+    animation: wave1 4s linear infinite;
+}
+
+#beginning::after {
+    content: ' ';
+    background-color: #3c3cf1;
+    display: block;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    border-radius: 100% 50%;
+    transform: translate(-20%, 5%);
+    animation: wave 12s linear infinite;
+    z-index: 1;
+}
+
+#clubStart {
+    color: white;
+    z-index: 2;
+    padding-left: 40px;
+    margin-left: 20px;
+    position: relative;
+    text-shadow: 6px 3px 2px #29297b, 10px 6px 4px #000;
+    animation: animate1 2s 1 ease-in;
+    animation-delay: 0s;
+}
+
+#Subtitle {
+    color: white;
+    z-index: 4;
+    position: absolute;
+    top: 60px;
+    font-size: 12px;
+    text-shadow: 2px 2px 2px #29297b, 4px 3px 3px #000;
+    margin-left: 64px;
+}
+
+#startModel {
+    color: white;
+    z-index: 4;
+    position: relative;
+    text-align: end;
+    padding-right: 35px;
+    text-shadow: 2px 2px 2px #29297b, 4px 3px 3px #000;
+    animation: animate2 2s 1 ease-in;
+    animation-delay: 0s;
+}
+
+nav {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #3c3cf1;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+    flex: 0 1 auto;
+    padding: 10px;
+    margin: 4px;
+    z-index: 2;
+}
+
+li a {
+    color: white;
+    font-size: large;
+    font-weight: 100;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    padding: 5px;
+    text-shadow: 2px 1px 1px #29297b, 4px 2px 2px #000;
+    box-shadow: 4px 2px 2px 2px #29297b;
+}
+
+li a:hover {
+    color: white;
+    font-size: large;
+    padding: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 20%;
+    background: linear-gradient(to top left, #3c3cf1, #302cc1);
+    transition: 0.3s;
+    transition-delay: 0.3s;
+    z-index: 2;
+}
+
+@media screen and (max-width:450px) {
+    blockquote {
+        position: relative;
+        color: #29297b;
+        font-size: large;
+        font-weight: 100;
+        text-align: start;
+        padding: 6px;
+        margin: 4px;
+        z-index: 10;
+    }
+    #begin {
+        background-color: #302cc1;
+        position: absolute;
+        top: 0;
+        height: 320px;
+        width: 100%;
+        z-index: -1;
+    }
+    #beginning {
+        background-color: #3c3cf1;
+        position: absolute;
+        top: 0;
+        height: 230px;
+        width: 100%;
+        z-index: 1;
+    }
+    #beginning::after {
+        content: ' ';
+        background-color: #3c3cf1;
+        display: block;
+        top: 200px;
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        border-radius: 100% 50%;
+        transform: translate(-20%, 6%);
+        animation: wave 12s linear infinite;
+        z-index: 1;
+    }
+    #Subtitle {
+        color: white;
+        z-index: 4;
+        position: absolute;
+        top: 84px;
+        font-size: 12px;
+        text-shadow: 2px 2px 2px #29297b, 4px 3px 3px #000;
+        margin-left: 64px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    #Subtitle {
+        color: white;
+        z-index: 4;
+        position: absolute;
+        top: 90px;
+        font-size: 12px;
+        text-shadow: 2px 2px 2px #29297b, 4px 3px 3px #000;
+        margin-left: 30px;
+    }
+}
